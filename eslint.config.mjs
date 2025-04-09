@@ -35,7 +35,12 @@ export default defineConfig([
   {
     ignores: [
       'node_modules/',
-      'lib/'
+      'lib/',
+      'src/generated/',
+      'src/index.tsx',
+      'src/Native*.ts',
+      '.yarn/',
+      'eslint.config.mjs',
     ],
   },
 ]);

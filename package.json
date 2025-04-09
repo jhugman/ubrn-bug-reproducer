@@ -1,7 +1,7 @@
 {
   "name": "ubrn-bug-reproducer",
   "version": "0.1.0",
-  "description": "An automated test",
+  "description": "A reprducer project",
   "source": "./src/index.tsx",
   "main": "./lib/module/index.js",
   "exports": {
@@ -31,6 +31,10 @@
     "!**/.*"
   ],
   "scripts": {
+    "ubrn:ios": "ubrn build ios     --config ubrn.config.yaml --and-generate && (cd example/ios && pod install)",
+    "ubrn:android": "ubrn build android --config ubrn.config.yaml --and-generate",
+    "ubrn:checkout": "ubrn checkout      --config ubrn.config.yaml",
+    "ubrn:clean": "rm -Rf cpp/ android/src/main/java ios/ src/Native* src/generated/ src/index.ts*",
     "example": "yarn workspace ubrn-bug-reproducer-example",
     "test": "jest",
     "typecheck": "tsc",
@@ -56,6 +60,9 @@
   "homepage": "https://github.com/jhugman/ubrn-bug-reproducer#readme",
   "publishConfig": {
     "registry": "https://registry.npmjs.org/"
+  },
+  "dependencies": {
+    "uniffi-bindgen-react-native": "0.29.0-0"
   },
   "devDependencies": {
     "@commitlint/config-conventional": "^19.6.0",
@@ -108,10 +115,10 @@
       "tagName": "v${version}"
     },
     "npm": {
-      "publish": true
+      "publish": false
     },
     "github": {
-      "release": true
+      "release": false
     },
     "plugins": {
       "@release-it/conventional-changelog": {
@@ -123,7 +130,7 @@
   },
   "prettier": {
     "quoteProps": "consistent",
-    "singleQuote": true,
+    "singleQuote": false,
     "tabWidth": 2,
     "trailingComma": "es5",
     "useTabs": false

@@ -1,33 +1,15 @@
-# ubrn-bug-reproducer
+# Uniffi Bindgen React Native Bug Reproducer
 
-An automated test
+> [!IMPORTANT]
+> Do not just **fork** this repository, but use instead the [![Use this template](view-source:https://img.shields.io/badge/-Use%20this%20template-1f883d)](https://github.com/new?template_name=ubrn-bug-reproducer&template_owner=jhugman) button on GitHub.
 
-## Installation
+This is the Uniffi Bindgen for React Native **reproducer** template.
 
-```sh
-npm install ubrn-bug-reproducer
-```
+You can use this template to create a minimal, complete, and reproducible project that the community can use to understand what's your problem. You can read more about the principles of a good reproducible project [here](https://stackoverflow.com/help/mcve).
 
-## Usage
+## How to use this repository
 
-
-```js
-import { multiply } from 'ubrn-bug-reproducer';
-
-// ...
-
-const result = multiply(3, 7);
-```
-
-
-## Contributing
-
-See the [contributing guide](CONTRIBUTING.md) to learn how to contribute to the repository and the development workflow.
-
-## License
-
-MIT
-
----
-
-Made with [create-react-native-library](https://github.com/callstack/react-native-builder-bob)
+1. Click on [![Use this template](view-source:https://img.shields.io/badge/-Use%20this%20template-1f883d)](https://github.com/new?template_name=ubrn-bug-reproducer&template_owner=jhugman) button to create a new repository starting from this one.
+2. Git clone your repository locally.
+3. Edit the project to reproduce the failure you're seeing.
+4. Push your changes, so that Github Actions can run the CI.

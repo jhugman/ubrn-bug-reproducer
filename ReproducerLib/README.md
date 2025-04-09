@@ -1,22 +1,38 @@
 # ubrn-bug-reproducer
 
-An automated test
+A bug reproducer project.
 
-## Installation
+Change the Rust in `rust` directory.
+
+Change the typescript in `example/src/App.tsx` to exercise the Rust.
+
+Re-generate the library each time you change the rust with:
 
 ```sh
-npm install ubrn-bug-reproducer
+yarn ubrn:ios
+yarn ubrn:android
 ```
+
+Once you have reproduced the bug you're seeing, then push the changes to your repro project.
+
+You should then be able to reference the repro project when filing an issue with uniffi-bindgen-react-native.
 
 ## Usage
 
+On first cloning, run:
+```sh
+yarn
+```
 
-```js
-import { multiply } from 'ubrn-bug-reproducer';
+You can regenerate bindings with:
+```sh
+yarn ubrn:ios
+yarn ubrn:android
+```
 
-// ...
-
-const result = multiply(3, 7);
+To run the example project:
+```sh
+yarn example start
 ```
 
 

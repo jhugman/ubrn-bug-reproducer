@@ -40,10 +40,11 @@ project.xcworkspace
 .settings
 local.properties
 android.iml
+**/jniLibs
 
 # Cocoapods
 #
-example/ios/Pods
+**/example/ios/Pods
 
 # Ruby
 example/vendor/
@@ -58,11 +59,11 @@ yarn-error.log
 # BUCK
 buck-out/
 \.buckd/
-android/app/libs
-android/keystores/debug.keystore
+**/android/app/libs
+**/android/keystores/debug.keystore
 
 # Yarn
-.yarn/*
+**/.yarn/*
 !.yarn/patches
 !.yarn/plugins
 !.yarn/releases
@@ -79,8 +80,9 @@ android/keystores/debug.keystore
 lib/
 
 # React Native Codegen
-ios/generated
-android/generated
+**/ios/generated
+**/android/generated
+**/generated
 
 # React Native Nitro Modules
 nitrogen/
